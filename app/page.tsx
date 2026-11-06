@@ -1,17 +1,23 @@
+// TEMPORARY — test page for the navigation. Replaced by Hero/About/Works/Contact in step 3.8.
+const sections = [
+  { id: "top", label: "Hero" },
+  { id: "about", label: "About" },
+  { id: "works", label: "Works" },
+  { id: "contact", label: "Contact" },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen space-y-8 p-12">
-      <h1 className="font-serif text-6xl italic leading-tight">
-        Nícola Iris
-        <br />
-        Vilander Gajardo
-      </h1>
-      <p className="max-w-prose text-lg">
-        Body text in Work Sans. Kaksi etelää · Ormazábal · Irarrázabal.
-      </p>
-      <p className="text-muted">Secondary text in muted.</p>
-      <p className="text-accent">Accent colour.</p>
-      <div className="h-24 border border-dashed border-line bg-surface" />
-    </main>
+    <>
+      {sections.map((section) => (
+        <section
+          key={section.id}
+          id={section.id}
+          className="flex min-h-screen items-center border-b border-line px-5 lg:pr-16 lg:pl-0"
+        >
+          <h2 className="font-serif text-5xl italic">{section.label}</h2>
+        </section>
+      ))}
+    </>
   );
 }

@@ -13,8 +13,21 @@
 }
 
 @layer base {
+  :root {
+    /* Height of the fixed mobile/tablet top bar. 0 on desktop (side menu). */
+    --header-height: 6rem;
+  }
+
+  @media (width >= 64rem) {
+    :root {
+      --header-height: 0px;
+    }
+  }
+
   html {
     color-scheme: dark;
+    /* Anchor jumps land below the fixed top bar. */
+    scroll-padding-top: var(--header-height);
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -27,8 +40,13 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  :focus-visible {
+    outline: 2px solid --theme(--color-accent);
+    outline-offset: 3px;
+  }
+
   ::selection {
-    background-color: var(--color-accent);
-    color: var(--color-background);
+    background-color: --theme(--color-accent);
+    color: --theme(--color-background);
   }
 }
