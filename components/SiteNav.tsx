@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { HERO_ID, navItems, type NavItem } from "@/content/navigation";
 import { site } from "@/content/site";
 import type { SectionId } from "@/content/types";
@@ -10,6 +11,21 @@ const TRACKED_IDS: readonly (SectionId | typeof HERO_ID)[] = [
   HERO_ID,
   ...navItems.map((item) => item.id),
 ];
+
+/**
+ * The brush squiggle is used as a mask, so its color comes from the
+ * background utility (bg-accent) and follows the accent token.
+ */
+const SQUIGGLE_MASK: CSSProperties = {
+  maskImage: "url(/squiggle.svg)",
+  maskSize: "contain",
+  maskRepeat: "no-repeat",
+  maskPosition: "center",
+  WebkitMaskImage: "url(/squiggle.svg)",
+  WebkitMaskSize: "contain",
+  WebkitMaskRepeat: "no-repeat",
+  WebkitMaskPosition: "center",
+};
 
 type NavLinkProps = {
   item: NavItem;
@@ -30,7 +46,8 @@ function NavLink({ item, isActive, variant }: NavLinkProps) {
       {variant === "desktop" && (
         <span
           aria-hidden="true"
-          className={`h-px w-6 motion-safe:transition-colors ${isActive ? "bg-accent" : "bg-transparent"}`}
+          style={SQUIGGLE_MASK}
+          className={`h-3 w-8 shrink-0 motion-safe:transition-colors ${isActive ? "bg-accent" : "bg-transparent"}`}
         />
       )}
       {item.label}
