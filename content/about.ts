@@ -1,8 +1,10 @@
 import type { About } from "./types";
 
-// DRAFT — texts from the cut proposal, pending Nícola's validation (deadline 12 Nov).
+// Texts validated by Nícola (7 Nov). Images, credits and press links pending.
 export const about: About = {
   bio: "Nícola Vilander Gajardo is a Chilean transdisciplinary artist, performer, and educator working across opera, theatre, and artistic research. Her practice approaches opera and performance as entangled bio-socio-cultural phenomena. Grounded in trans experience, social justice frameworks, and inclusive pedagogies, her work engages human and more-than-human bodies as collaborators. By deliberately blurring the boundaries between artist, performer, and audience, her practice foregrounds collective authorship, affective circulation, and embodied modes of knowing that challenge canonical, colonial, and binary structures within opera and performance.",
+
+  bioImage: null,
 
   linesOfInquiry: [
     "Posthumanism",

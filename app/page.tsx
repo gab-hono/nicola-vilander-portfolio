@@ -1,23 +1,19 @@
-// TEMPORARY — test page for the navigation. Replaced by Hero/About/Works/Contact in step 3.8.
-const sections = [
-  { id: "top", label: "Hero" },
-  { id: "about", label: "About" },
-  { id: "works", label: "Works" },
-  { id: "contact", label: "Contact" },
-];
+import { AboutSection } from "@/components/AboutSection";
+import { HeroSection } from "@/components/HeroSection";
 
 export default function Home() {
   return (
-    <>
-      {sections.map((section) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className="flex min-h-screen items-center border-b border-line px-5 lg:pr-16 lg:pl-0"
-        >
-          <h2 className="font-serif text-5xl italic">{section.label}</h2>
-        </section>
-      ))}
-    </>
+    <div className="flex flex-col gap-24 px-5 pt-6 pb-24 text-base leading-relaxed lg:gap-40 lg:pt-12 lg:pr-16 lg:pl-0 lg:text-[17px]">
+      <HeroSection />
+      <AboutSection />
+
+      {/* TEMPORARY — keeps the navigation testable. Replaced in 3.9 (Works) and 3.10 (Contact). */}
+      <section id="works" className="min-h-screen scroll-mt-6 border-t border-line pt-12 lg:scroll-mt-12">
+        <h2 className="font-serif text-[40px] italic lg:text-[56px]">Works</h2>
+      </section>
+      <section id="contact" className="min-h-[60vh] scroll-mt-6 border-t border-line pt-12 lg:scroll-mt-12">
+        <h2 className="font-serif text-[40px] italic lg:text-[56px]">Contact</h2>
+      </section>
+    </div>
   );
 }

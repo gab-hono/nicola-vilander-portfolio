@@ -52,6 +52,8 @@ export type AboutBlock = {
 
 export type About = {
   bio: string;
+  /** Image next to the bio (still from 'Action is Overtaken'). */
+  bioImage: ImageAsset | null;
   linesOfInquiry: string[];
   practice: AboutBlock;
   research: AboutBlock;
