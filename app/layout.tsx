@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Work_Sans } from "next/font/google";
 import { SiteNav } from "@/components/SiteNav";
+import { site } from "@/content/site";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -17,7 +18,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Nícola Vilander Gajardo",
+  title: site.name,
   description:
     "Transdisciplinary artist, actress, director and researcher working across opera, theatre and artistic research.",
 };
