@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/AboutSection";
+import { ContactSection } from "@/components/ContactSection";
 import { HeroSection } from "@/components/HeroSection";
 import { WorksSection } from "@/components/WorksSection";
 
@@ -8,14 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <WorksSection />
-
-      {/* TEMPORARY — keeps the navigation testable. Replaced in 3.10 (Contact). */}
-      <section
-        id="contact"
-        className="min-h-[60vh] scroll-mt-6 border-t border-line pt-12 lg:scroll-mt-12"
-      >
-        <h2 className="font-serif text-[40px] italic lg:text-[56px]">Contact</h2>
-      </section>
+      <ContactSection />
     </div>
   );
 }

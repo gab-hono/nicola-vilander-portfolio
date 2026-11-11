@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Work_Sans } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main id="main" className="pt-(--header-height) lg:pl-70">
           {children}
         </main>
+        <SiteFooter />
       </body>
     </html>
   );
