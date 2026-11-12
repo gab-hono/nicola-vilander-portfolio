@@ -15,13 +15,15 @@ const TRACKED_IDS: readonly (SectionId | typeof HERO_ID)[] = [
 /**
  * The brush squiggle is used as a mask, so its color comes from the
  * background utility (bg-accent) and follows the accent token.
+ * It is a 128×51 alpha PNG (~3 KB): the original was a traced bitmap
+ * (1 440 SVG paths, ~188 KB) for a 32×12 px icon.
  */
 const SQUIGGLE_MASK: CSSProperties = {
-  maskImage: "url(/squiggle.svg)",
+  maskImage: "url(/squiggle.png)",
   maskSize: "contain",
   maskRepeat: "no-repeat",
   maskPosition: "center",
-  WebkitMaskImage: "url(/squiggle.svg)",
+  WebkitMaskImage: "url(/squiggle.png)",
   WebkitMaskSize: "contain",
   WebkitMaskRepeat: "no-repeat",
   WebkitMaskPosition: "center",
