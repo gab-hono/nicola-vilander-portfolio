@@ -18,6 +18,10 @@ function TextBlock({ block }: { block: AboutBlock }) {
   );
 }
 
+/*
+ * Every grid declares grid-cols-1 on mobile: an implicit grid track is "auto" and can grow
+ * past the screen with its widest item; repeat(1, minmax(0, 1fr)) caps it to the container.
+ */
 export function AboutSection() {
   const { bio, bioImage, linesOfInquiry, practice, research, press } = about;
 
@@ -31,7 +35,7 @@ export function AboutSection() {
       </h2>
 
       {/* Bio + image */}
-      <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
         <p className="text-lg leading-[1.55] lg:text-[21px]">{bio}</p>
         <MediaImage
           image={bioImage}
@@ -61,7 +65,7 @@ export function AboutSection() {
       </div>
 
       {/* Operatic & Vocal Practice: image left, text right */}
-      <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
         <MediaImage
           image={practice.image}
           placeholderLabel="Nícola singing (Pam Berry)"
@@ -72,7 +76,7 @@ export function AboutSection() {
       </div>
 
       {/* Research & Networks + Press */}
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
         <div className="flex flex-col gap-8">
           {research.image && (
             <MediaImage

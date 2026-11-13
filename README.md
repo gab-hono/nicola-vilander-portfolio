@@ -4,7 +4,7 @@ One-page portfolio for **Nícola Vilander-Gajardo**, a Chilean transdisciplinary
 
 **Live:** [nicola-vilander-portfolio.vercel.app](https://nicola-vilander-portfolio.vercel.app)
 
-> **Status:** in progress. Structure, texts and navigation are in place; photographs and video links are still being collected, so images currently render as labelled placeholders.
+> **Status:** in progress. Structure, texts and navigation are in place; some photographs and all video links are still being collected, so missing images render as labelled placeholders.
 
 ## Stack
 
@@ -37,9 +37,12 @@ content/
   about.ts          # Bio, lines of inquiry, practice, research, press
   projects.ts       # The eight works
   navigation.ts     # Menu items and section anchors
+  images/           # Web-ready photos, one folder per project
 hooks/
   useActiveSection.ts
 public/             # Static assets
+scripts/
+  process-images.mjs  # Prepares original photos for the web
 ```
 
 ## Getting started
@@ -51,12 +54,17 @@ npm install
 npm run dev      # http://localhost:3000
 npm run build    # production build
 npm run lint
+npm run images   # process original photos (see below)
 ```
 
 ## Editing content
 
 - Texts, roles and credits: edit the files in `content/`. TypeScript flags any missing or misspelled field.
-- Images: import the file statically in the content file and set `src` and `alt`. A static import gives `next/image` the dimensions and a blur placeholder.
+- Images:
+  1. Keep the originals outside the repo, one folder per project (default: `../nicola-fotos-originales`).
+  2. Run `npm run images`. It converts HEIC, applies the camera orientation, strips all metadata (including GPS), resizes to 2400 px on the long edge and writes JPEGs, a contact sheet and a report to `../nicola-fotos-web`.
+  3. Copy only the selected photos to `content/images/<project>/`, import them statically in the content file and set `src` and `alt`. A static import gives `next/image` the dimensions and a blur placeholder.
+- Lead images should be landscape: they are cropped to 16:9 on desktop and 4:3 on mobile.
 - Videos: add `{ title, provider: "youtube" | "vimeo", id }` to a project's `videos` array (the ID only, not the full URL).
 
 ## Credits

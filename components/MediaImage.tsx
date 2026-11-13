@@ -31,7 +31,7 @@ export function MediaImage({
   }
 
   return (
-    <figure className="flex flex-col gap-2">
+    <figure className="flex min-w-0 flex-col gap-2">
       <div className={`relative overflow-hidden bg-surface ${className}`}>
         <Image
           src={image.src}
