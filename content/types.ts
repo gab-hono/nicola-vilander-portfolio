@@ -22,7 +22,7 @@ export type Project = {
   /** URL anchor, e.g. "action-is-overtaken" → /#action-is-overtaken */
   slug: string;
   title: string;
-  /** Free text: "2017", "2018–2019", "2020–ongoing". */
+  /** Free text, en dash with spaces for ranges: "2017", "2018 – 2019", "2020 – ongoing". */
   years: string;
   /** null until Nícola confirms it. */
   role: string | null;
