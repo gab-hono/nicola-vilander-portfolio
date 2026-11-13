@@ -6,6 +6,8 @@ import heroImage from "./images/pam-berry/cv-pbe-069.jpg";
 // Hero image is provisional (still from Pam Berry, confirmed by Nícola on 13 Nov) until she sends a portrait.
 // TODO: credit for the hero photo (Pam Berry photographer by session).
 export const site: Site = {
+  // TODO: switch to the custom domain once it is bought and connected (2 Dec).
+  url: "https://nicola-vilander-portfolio.vercel.app",
   name: "Nícola Vilander-Gajardo",
   fullName: "Nícola Iris Vilander-Gajardo",
   roles: [

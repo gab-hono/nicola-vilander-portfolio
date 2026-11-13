@@ -18,10 +18,32 @@ const workSans = Work_Sans({
   display: "swap",
 });
 
+const TITLE = `${site.name} · Transdisciplinary Artist`;
+const DESCRIPTION =
+  "Chilean transdisciplinary artist, actress, director and researcher working across opera, theatre and artistic research.";
+
+/**
+ * The Open Graph image is app/opengraph-image.jpg (1200×630, centre crop of the hero photo)
+ * with its alt text in opengraph-image.alt.txt; Next.js adds the og:image tags from those files.
+ */
 export const metadata: Metadata = {
-  title: site.name,
-  description:
-    "Transdisciplinary artist, actress, director and researcher working across opera, theatre and artistic research.",
+  metadataBase: new URL(site.url),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

@@ -61,6 +61,8 @@ export type About = {
 };
 
 export type Site = {
+  /** Canonical production URL, no trailing slash. Used as metadataBase for Open Graph. */
+  url: string;
   /** Short name for nav and metadata. */
   name: string;
   /** Full name for the hero. */
