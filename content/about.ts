@@ -4,7 +4,8 @@ import practiceImage from "./images/pam-berry/cv-pbe-041.jpg";
 import researchImage from "./images/mister-the-earrings/1g4a7175.jpg";
 
 // Texts validated by Nícola (7 Nov); name updated to "Vilander-Gajardo" (11 Nov).
-// Images added on 13 Nov. Pending: practice photo credit and press links.
+// Images added on 13 Nov. Press links from Nícola (17 Nov), dates checked against each source.
+// Pending: practice photo credit.
 export const about: About = {
   bio: "Nícola Vilander-Gajardo is a Chilean transdisciplinary artist, performer, and educator working across opera, theatre, and artistic research. Her practice approaches opera and performance as entangled bio-socio-cultural phenomena. Grounded in trans experience, social justice frameworks, and inclusive pedagogies, her work engages human and more-than-human bodies as collaborators. By deliberately blurring the boundaries between artist, performer, and audience, her practice foregrounds collective authorship, affective circulation, and embodied modes of knowing that challenge canonical, colonial, and binary structures within opera and performance.",
 
@@ -52,10 +53,63 @@ export const about: About = {
     credits: null,
   },
 
-  // TODO: URLs, outlets and dates pending from Nícola:
-  // - "Mi profe es trans": Profesores transgénero en colegios de Chile (July 2023)
-  // - La transición de una profesora
-  // - Pam Berry — Centro Gabriela Mistral (GAM)
-  // - Interview with Ana Luz Ormazábal and Nícola Vilander (YouTube)
-  press: [],
+  // Newest first. Dates checked against each source and confirmed (17 Nov);
+  // Cuir Cuir (2025) and the Tiempo de Escena interview (2025) are dated by Nícola.
+  press: [
+    {
+      title: "Pam Berry",
+      outlet: "Festival Cuir Cuir",
+      date: "2025",
+      url: "https://cuircuir.cl/pam-berry",
+    },
+    {
+      title: "Interview with Ana Luz Ormazábal and Nícola Vilander-Gajardo",
+      outlet: "Tiempo de Escena (YouTube)",
+      date: "2025",
+      url: "https://www.youtube.com/watch?v=FeY_LBPvHkI",
+    },
+    {
+      title: "Pam Berry",
+      outlet: "Revista Telón",
+      date: "December 2024",
+      url: "https://www.telon.cl/single-post/pam-berry",
+    },
+    {
+      title: "‘Pam Berry’: brujas y monjas se cruzan en los sueños de una joven lesbiana en GAM",
+      lang: "es",
+      translation: "Witches and nuns cross paths in a young lesbian’s dreams at GAM",
+      outlet: "BioBioChile",
+      date: "November 2024",
+      url: "https://www.biobiochile.cl/noticias/artes-y-cultura/teatro/2024/11/21/pam-berry-brujas-y-monjas-se-cruzan-en-los-suenos-de-una-joven-lesbiana-en-gam.shtml",
+    },
+    {
+      title: "Pam Berry",
+      outlet: "GAM (Instagram)",
+      date: "November 2024",
+      url: "https://www.instagram.com/p/DCZakpzRo6S/",
+    },
+    {
+      title: "Ciclo de Teatro Diversidades Mónica Briones: Pam Berry",
+      lang: "es",
+      outlet: "Museo de la Memoria y los Derechos Humanos",
+      date: "September 2024",
+      url: "https://mmdh.cl/cartelera/ciclo-de-teatro-diversidades-monica-briones-pam-berry",
+    },
+    {
+      title: "“Mi profe es trans”: Profesores transgénero en colegios de Chile",
+      lang: "es",
+      translation: "My teacher is trans",
+      outlet: "Galio",
+      date: "July 2023",
+      url: "https://galio.cl/2023/07/07/mi-profe-es-trans-profesores-transgenero-en-colegios-de-chile/",
+    },
+    {
+      title: "La transición de una profesora",
+      lang: "es",
+      translation: "A teacher’s transition",
+      outlet: "Revista Sábado, El Mercurio (X)",
+      date: "June 2023",
+      url: "https://x.com/Revista_Sabado/status/1665039589474541568",
+    },
+  ],
 };

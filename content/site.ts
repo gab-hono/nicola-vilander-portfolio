@@ -2,7 +2,7 @@ import type { Site } from "./types";
 import heroImage from "./images/pam-berry/cv-pbe-069.jpg";
 
 // Name confirmed by Nícola (11 Nov): "Vilander-Gajardo", with hyphen.
-// TODO: order of the hero roles — Nícola is reviewing it.
+// Hero roles and their order confirmed by Nícola (17 Nov).
 // Hero image is provisional (still from Pam Berry, confirmed by Nícola on 13 Nov) until she sends a portrait.
 // TODO: credit for the hero photo (Pam Berry photographer by session).
 export const site: Site = {

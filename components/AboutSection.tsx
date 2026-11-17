@@ -99,10 +99,15 @@ export function AboutSection() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex justify-between gap-4 py-4 hover:text-accent motion-safe:transition-colors"
+                    className="flex flex-col gap-1 py-4 hover:text-accent motion-safe:transition-colors lg:flex-row lg:justify-between lg:gap-6"
                   >
-                    <span>{item.title}</span>
-                    <span className="shrink-0 text-muted">
+                    <span>
+                      <span lang={item.lang}>{item.title}</span>
+                      {item.translation && (
+                        <span className="text-muted"> ({item.translation})</span>
+                      )}
+                    </span>
+                    <span className="text-[13px] text-muted lg:max-w-[40%] lg:shrink-0 lg:text-right lg:text-[15px]">
                       {item.outlet}
                       {item.date ? `, ${item.date}` : ""}{" "}
                       <span aria-hidden="true">↗</span>

@@ -14,7 +14,8 @@ import pamBerryBall from "./images/pam-berry/cv-pbe-107.jpg";
 
 // Texts validated by Nícola (7 Nov); roles and credits updated with her answers (11 Nov).
 // Images added on 13 Nov (Action is Overtaken, Pam Berry, Mister, Divas).
-// Pending from Nícola: Pam Berry photo credits, Mister description, remaining images and video IDs.
+// Mister description by Nícola (17 Nov).
+// Pending from Nícola: Pam Berry photo credits, remaining images and video IDs.
 export const projects: Project[] = [
   {
     slug: "a-more-than-human-opera",
@@ -45,9 +46,8 @@ export const projects: Project[] = [
     title: "Mister, the earrings look too good on you",
     years: "2023 – ongoing",
     role: "Performer, Creative Director, Author",
-    // TODO: Nícola to send 2–3 more sentences.
     description:
-      "Affects and the first transition of a teacher in an elite British school in Chile. Performances in London (2025), Santiago (2024), and Brno (2023).",
+      "A hybrid lecture-performance on the social gender transition of a Drama teacher in an elite Chilean-British school – the first publicly transgender teacher to undergo a transition within Chile’s school system – as a site to examine how the Binary Gender Norm materialises and circulates in educational spaces. Through scenic realisation, spatial reconfigurations and audience participation that evoke the dynamics of the classroom, it stages a collective inquiry into transition as a shared, affective process of becoming. Presented at the SIEF Congress (Brno, 2023), the 6th Interdisciplinary Research in Education Congress (PUC Chile, Santiago, 2024) and the Performance Studies Network Conference (Guildhall School, London, 2025).",
     leadImage: {
       src: misterLead,
       alt: "Black-and-white photo of a performer raising both hands above the head beside a grand piano",

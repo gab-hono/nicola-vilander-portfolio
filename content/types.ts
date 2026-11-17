@@ -36,7 +36,12 @@ export type Project = {
 };
 
 export type PressItem = {
+  /** Original headline, in the language it was published in. */
   title: string;
+  /** BCP 47 language of the title when it is not English, e.g. "es", so screen readers switch voice. */
+  lang?: string;
+  /** English translation shown after a non-English title. */
+  translation?: string;
   outlet: string;
   /** Free text, e.g. "July 2023". */
   date: string | null;
