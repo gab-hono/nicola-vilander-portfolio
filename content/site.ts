@@ -17,6 +17,8 @@ export const site: Site = {
   heroImage: {
     src: heroImage,
     alt: "Nícola Vilander-Gajardo in a nun’s veil, arms outstretched, in front of a large red sphere in Pam Berry",
+    // Keeps the face in frame when the desktop hero is shorter than the photo.
+    position: "50% 25%",
   },
   email: "nicola.vilander@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/nicolavilander",

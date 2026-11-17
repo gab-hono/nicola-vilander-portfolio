@@ -9,6 +9,8 @@ export type ImageAsset = {
   alt: string;
   /** Per-image credit, only when it differs from the project credit. */
   credit?: string;
+  /** CSS object-position focal point when the frame crops the photo, e.g. "50% 25%". Default: centre. */
+  position?: string;
 };
 
 export type Video = {

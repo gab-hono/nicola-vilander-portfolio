@@ -6,6 +6,10 @@ import { site } from "@/content/site";
 import type { SectionId } from "@/content/types";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
+/** "Nícola" / "Vilander-Gajardo": two deliberate lines in the side menu instead of a break at the hyphen. */
+const [FIRST_NAME, ...REST_OF_NAME] = site.name.split(" ");
+const LAST_NAME = REST_OF_NAME.join(" ");
+
 /** Module-level constant so the hook's effect does not re-run on every render. */
 const TRACKED_IDS: readonly (SectionId | typeof HERO_ID)[] = [
   HERO_ID,
@@ -91,7 +95,8 @@ export function SiteNav() {
           href={`#${HERO_ID}`}
           className="font-serif text-2xl leading-tight italic"
         >
-          {site.name}
+          <span className="block">{FIRST_NAME}</span>
+          <span className="block whitespace-nowrap">{LAST_NAME}</span>
         </a>
         <nav aria-label="Main">
           <ul className="flex flex-col gap-2">

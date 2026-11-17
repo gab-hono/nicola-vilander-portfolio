@@ -7,6 +7,8 @@ type MediaImageProps = {
   placeholderLabel: string;
   /** Sizing of the frame, e.g. "aspect-4/5 lg:aspect-video". */
   className: string;
+  /** Extra classes for the outer figure, e.g. to let it grow inside a flex column. */
+  figureClassName?: string;
   /** Rendered width hints for next/image. */
   sizes: string;
   /** Load immediately with high priority (hero / LCP image only). */
@@ -18,6 +20,7 @@ export function MediaImage({
   placeholderLabel,
   className,
   sizes,
+  figureClassName = "",
   eager = false,
 }: MediaImageProps) {
   if (!image) {
@@ -31,7 +34,7 @@ export function MediaImage({
   }
 
   return (
-    <figure className="flex min-w-0 flex-col gap-2">
+    <figure className={`flex min-w-0 flex-col gap-2 ${figureClassName}`}>
       <div className={`relative overflow-hidden bg-surface ${className}`}>
         <Image
           src={image.src}
@@ -42,6 +45,7 @@ export function MediaImage({
           loading={eager ? "eager" : "lazy"}
           fetchPriority={eager ? "high" : "auto"}
           className="object-cover"
+          style={image.position ? { objectPosition: image.position } : undefined}
         />
       </div>
       {image.credit && (
