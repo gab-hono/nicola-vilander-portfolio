@@ -75,7 +75,8 @@ export function SiteNav() {
           {site.name}
         </a>
         <nav aria-label="Main">
-          <ul className="flex gap-6">
+          {/* gap-5: four links fit in the 320px of a 360px screen (~300px). */}
+          <ul className="flex gap-5">
             {navItems.map((item) => (
               <li key={item.id}>
                 <NavLink

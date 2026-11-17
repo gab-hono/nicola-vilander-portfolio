@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 
 /** Section anchors used by the navigation. */
-export type SectionId = "about" | "works" | "contact";
+export type SectionId = "about" | "works" | "press" | "contact";
 
 export type ImageAsset = {
   /** Static import, so next/image knows width, height and blur placeholder. */
@@ -64,7 +64,6 @@ export type About = {
   linesOfInquiry: string[];
   practice: AboutBlock;
   research: AboutBlock;
-  press: PressItem[];
 };
 
 export type Site = {

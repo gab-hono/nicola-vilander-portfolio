@@ -23,7 +23,7 @@ function TextBlock({ block }: { block: AboutBlock }) {
  * past the screen with its widest item; repeat(1, minmax(0, 1fr)) caps it to the container.
  */
 export function AboutSection() {
-  const { bio, bioImage, linesOfInquiry, practice, research, press } = about;
+  const { bio, bioImage, linesOfInquiry, practice, research } = about;
 
   return (
     <section
@@ -75,50 +75,16 @@ export function AboutSection() {
         <TextBlock block={practice} />
       </div>
 
-      {/* Research & Networks + Press */}
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
-        <div className="flex flex-col gap-8">
-          {research.image && (
-            <MediaImage
-              image={research.image}
-              placeholderLabel="research"
-              className="aspect-4/3"
-              sizes={HALF_COLUMN_SIZES}
-            />
-          )}
-          <TextBlock block={research} />
-        </div>
-
-        {press.length > 0 && (
-          <div className="flex flex-col gap-5">
-            <h3 className={blockTitle}>Press</h3>
-            <ul className="flex flex-col border-t border-line">
-              {press.map((item) => (
-                <li key={item.url} className="border-b border-line">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col gap-1 py-4 hover:text-accent motion-safe:transition-colors lg:flex-row lg:justify-between lg:gap-6"
-                  >
-                    <span>
-                      <span lang={item.lang}>{item.title}</span>
-                      {item.translation && (
-                        <span className="text-muted"> ({item.translation})</span>
-                      )}
-                    </span>
-                    <span className="text-[13px] text-muted lg:max-w-[40%] lg:shrink-0 lg:text-right lg:text-[15px]">
-                      {item.outlet}
-                      {item.date ? `, ${item.date}` : ""}{" "}
-                      <span aria-hidden="true">↗</span>
-                    </span>
-                    <span className="sr-only">(opens in a new tab)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      {/* Research & Networks: mirrors Practice (text left, image right on desktop; image first on mobile) */}
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <MediaImage
+          image={research.image}
+          placeholderLabel="research"
+          className="aspect-4/3"
+          figureClassName="lg:order-last"
+          sizes={HALF_COLUMN_SIZES}
+        />
+        <TextBlock block={research} />
       </div>
     </section>
   );

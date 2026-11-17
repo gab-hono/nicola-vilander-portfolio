@@ -8,6 +8,7 @@ export type NavItem = {
 export const navItems: readonly NavItem[] = [
   { id: "about", label: "About" },
   { id: "works", label: "Works" },
+  { id: "press", label: "Press" },
   { id: "contact", label: "Contact" },
 ];
 
