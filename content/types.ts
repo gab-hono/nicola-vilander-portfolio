@@ -13,6 +13,15 @@ export type ImageAsset = {
   position?: string;
 };
 
+/**
+ * A labelled list shown under a text, e.g. conferences or productions.
+ * Items, like body texts, accept _underscores_ around work titles to set them in italics.
+ */
+export type TextList = {
+  label: string;
+  items: string[];
+};
+
 export type Video = {
   title: string;
   provider: "youtube" | "vimeo";
@@ -28,7 +37,9 @@ export type Project = {
   years: string;
   /** null until Nícola confirms it. */
   role: string | null;
+  /** Accepts _underscores_ around work titles to set them in italics. */
   description: string;
+  lists?: TextList[];
   /** null until the photo arrives; the component renders a placeholder. */
   leadImage: ImageAsset | null;
   gallery: ImageAsset[];
@@ -52,7 +63,9 @@ export type PressItem = {
 
 export type AboutBlock = {
   title: string;
+  /** Accepts _underscores_ around work titles to set them in italics. */
   body: string;
+  lists?: TextList[];
   image: ImageAsset | null;
   credits: string | null;
 };

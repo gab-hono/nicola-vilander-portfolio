@@ -1,5 +1,7 @@
 import type { Project } from "@/content/types";
 import { MediaImage } from "./MediaImage";
+import { RichText } from "./RichText";
+import { TextLists } from "./TextLists";
 import { VideoEmbed } from "./VideoEmbed";
 
 const FULL_COLUMN_SIZES =
@@ -10,11 +12,20 @@ const GALLERY_SIZES =
   "(min-width: 1024px) calc((100vw - 344px - 64px - 16px) / 4), calc((100vw - 40px - 12px) / 2)";
 
 export function ProjectArticle({ project }: { project: Project }) {
-  const { slug, title, years, role, description, leadImage, gallery, videos, credits } =
+  const { slug, title, years, role, description, lists, leadImage, gallery, videos, credits } =
     project;
 
   const hasMedia = gallery.length > 0 || videos.length > 0;
   const titleId = `${slug}-title`;
+
+  const text = (
+    <div className="flex flex-col gap-6">
+      <p>
+        <RichText text={description} />
+      </p>
+      <TextLists lists={lists} />
+    </div>
+  );
 
   const creditsLine = credits && (
     <p className="text-[13px] text-muted">{credits}</p>
@@ -48,7 +59,7 @@ export function ProjectArticle({ project }: { project: Project }) {
 
       {hasMedia ? (
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
-          <p>{description}</p>
+          {text}
           <div className="flex flex-col gap-4">
             {gallery.length > 0 && (
               <div className="grid grid-cols-2 gap-3 lg:gap-4">
@@ -71,7 +82,7 @@ export function ProjectArticle({ project }: { project: Project }) {
         </div>
       ) : (
         <div className="flex max-w-prose flex-col gap-4">
-          <p>{description}</p>
+          {text}
           {creditsLine}
         </div>
       )}

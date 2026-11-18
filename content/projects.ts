@@ -15,6 +15,7 @@ import pamBerryBall from "./images/pam-berry/cv-pbe-107.jpg";
 // Texts validated by Nícola (7 Nov); roles and credits updated with her answers (11 Nov).
 // Images added on 13 Nov (Action is Overtaken, Pam Berry, Mister, Divas).
 // Mister description by Nícola (17 Nov).
+// 18 Nov: work titles in _italics_; enumerations moved to lists (same wording, newest first).
 // Pending from Nícola: Pam Berry photo credits, remaining images and video IDs.
 export const projects: Project[] = [
   {
@@ -23,7 +24,7 @@ export const projects: Project[] = [
     years: "2025",
     role: "Director, Performer, Playwright",
     description:
-      "A More-than-Human Opera is an immersive, practice-as-research project that reconceives opera as a more-than-human assemblage in which voice, audience, technology, and environment are co-constitutive agents. Through AI-mediated vocal processing, immersive staging, and participatory dramaturgies, the work interrogates how binary operatic norms are materially produced and how they might be destabilised through trans* vocal embodiment and technological non-recognition.",
+      "_A More-than-Human Opera_ is an immersive, practice-as-research project that reconceives opera as a more-than-human assemblage in which voice, audience, technology, and environment are co-constitutive agents. Through AI-mediated vocal processing, immersive staging, and participatory dramaturgies, the work interrogates how binary operatic norms are materially produced and how they might be destabilised through trans* vocal embodiment and technological non-recognition.",
     leadImage: null,
     gallery: [],
     videos: [],
@@ -35,7 +36,7 @@ export const projects: Project[] = [
     years: "2026 – ongoing",
     role: "Performer, Creative Director, Author",
     description:
-      "Listening Southward / Kaksi etelää opens a line of enquiry grounded in more-than-human thinking and biosociocultural justice: opera as a sensory method for listening to human–microbial relations between Patagonia and Finland. Its first paper, co-authored with Claudia Matus, was presented at the CSSM 2026 Conference (University of Helsinki).",
+      "_Listening Southward / Kaksi etelää_ opens a line of enquiry grounded in more-than-human thinking and biosociocultural justice: opera as a sensory method for listening to human–microbial relations between Patagonia and Finland. Its first paper, co-authored with Claudia Matus, was presented at the CSSM 2026 Conference (University of Helsinki).",
     leadImage: null,
     gallery: [],
     videos: [],
@@ -47,7 +48,17 @@ export const projects: Project[] = [
     years: "2023 – ongoing",
     role: "Performer, Creative Director, Author",
     description:
-      "A hybrid lecture-performance on the social gender transition of a Drama teacher in an elite Chilean-British school – the first publicly transgender teacher to undergo a transition within Chile’s school system – as a site to examine how the Binary Gender Norm materialises and circulates in educational spaces. Through scenic realisation, spatial reconfigurations and audience participation that evoke the dynamics of the classroom, it stages a collective inquiry into transition as a shared, affective process of becoming. Presented at the SIEF Congress (Brno, 2023), the 6th Interdisciplinary Research in Education Congress (PUC Chile, Santiago, 2024) and the Performance Studies Network Conference (Guildhall School, London, 2025).",
+      "A hybrid lecture-performance on the social gender transition of a Drama teacher in an elite Chilean-British school – the first publicly transgender teacher to undergo a transition within Chile’s school system – as a site to examine how the Binary Gender Norm materialises and circulates in educational spaces. Through scenic realisation, spatial reconfigurations and audience participation that evoke the dynamics of the classroom, it stages a collective inquiry into transition as a shared, affective process of becoming.",
+    lists: [
+      {
+        label: "Presented at",
+        items: [
+          "Performance Studies Network Conference (Guildhall School, London, 2025)",
+          "6th Interdisciplinary Research in Education Congress (PUC Chile, Santiago, 2024)",
+          "SIEF Congress (Brno, 2023)",
+        ],
+      },
+    ],
     leadImage: {
       src: misterLead,
       alt: "Black-and-white photo of a performer raising both hands above the head beside a grand piano",
@@ -121,7 +132,20 @@ export const projects: Project[] = [
     years: "2021 – 2025",
     role: "Theatre Education & Creativity",
     description:
-      "As Senior School Drama Teacher at The Grange School Chile (Cambridge IGCSE & A-Level Drama), Nícola led bilingual performance education grounded in embodiment and affect theory. Her Pedagogy of the Affect reconsiders more-than-human encounters within the classroom: how atmosphere, emotion, and voice co-shape collective learning. She has directed and mentored numerous student productions: Tragic (2023), Angels in America, The Just Assassins, The Bald Soprano (2024), and A Midsummer Night’s Dream (2025).",
+      "As Senior School Drama Teacher at The Grange School Chile (Cambridge IGCSE & A-Level Drama), Nícola led bilingual performance education grounded in embodiment and affect theory. Her _Pedagogy of the Affect_ reconsiders more-than-human encounters within the classroom: how atmosphere, emotion, and voice co-shape collective learning.",
+    lists: [
+      {
+        label: "Student productions directed and mentored",
+        // TODO: years for Angels in America and The Just Assassins (the source text only dates the group as 2024).
+        items: [
+          "_A Midsummer Night’s Dream_ (2025)",
+          "_The Bald Soprano_ (2024)",
+          "_The Just Assassins_",
+          "_Angels in America_",
+          "_Tragic_ (2023)",
+        ],
+      },
+    ],
     leadImage: null,
     gallery: [],
     videos: [],
@@ -133,7 +157,7 @@ export const projects: Project[] = [
     years: "2018 – 2019",
     role: "Director, Performer, Playwright",
     description:
-      "Divas was a 50-minute, 360° immersive, experimental theatre work critically examining representations of women and gender within the operatic canon. Structured as a fictional television interview with three retired opera divas from the 1980s, the piece generated Dead Divas, a speculative “new opera” that dismantled and recomposed La Traviata, Carmen, and Madama Butterfly. Vocal excess, instability, repetition, and breakdown were treated as material forces rather than expressive effects.",
+      "_Divas_ was a 50-minute, 360° immersive, experimental theatre work critically examining representations of women and gender within the operatic canon. Structured as a fictional television interview with three retired opera divas from the 1980s, the piece generated _Dead Divas_, a speculative “new opera” that dismantled and recomposed _La Traviata_, _Carmen_, and _Madama Butterfly_. Vocal excess, instability, repetition, and breakdown were treated as material forces rather than expressive effects.",
     leadImage: {
       src: divasLead,
       alt: "Black-and-white close-up of a hand and a body against creased fabric",
@@ -157,7 +181,7 @@ export const projects: Project[] = [
     years: "2017",
     role: "Director & Playwright",
     description:
-      "Elektra was a bilingual (German–Spanish), immersive reworking of Hugo von Hofmannsthal’s text created with an all-women cast in resonance with the Chilean feminist uprising. All performers were trained to embody the same roles—often simultaneously—merging contemporary dance practices with the foundations of lyric voice. The work incorporated live sound mixing and video projection as active dramaturgical agents.",
+      "_Elektra_ was a bilingual (German–Spanish), immersive reworking of Hugo von Hofmannsthal’s text created with an all-women cast in resonance with the Chilean feminist uprising. All performers were trained to embody the same roles—often simultaneously—merging contemporary dance practices with the foundations of lyric voice. The work incorporated live sound mixing and video projection as active dramaturgical agents.",
     leadImage: null,
     gallery: [],
     videos: [],

@@ -1,6 +1,8 @@
 import { about } from "@/content/about";
 import type { AboutBlock } from "@/content/types";
 import { MediaImage } from "./MediaImage";
+import { RichText } from "./RichText";
+import { TextLists } from "./TextLists";
 
 /** Half of the desktop content column (content width minus the 64px grid gap). */
 const HALF_COLUMN_SIZES =
@@ -12,7 +14,10 @@ function TextBlock({ block }: { block: AboutBlock }) {
   return (
     <div className="flex flex-col gap-5">
       <h3 className={blockTitle}>{block.title}</h3>
-      <p>{block.body}</p>
+      <p>
+        <RichText text={block.body} />
+      </p>
+      <TextLists lists={block.lists} />
       {block.credits && <p className="text-[13px] text-muted">{block.credits}</p>}
     </div>
   );
