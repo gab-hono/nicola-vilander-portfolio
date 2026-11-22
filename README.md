@@ -18,7 +18,7 @@ One-page portfolio for **Nícola Vilander-Gajardo**, a Chilean transdisciplinary
 
 - **Typed content layer.** All copy lives in `content/` as typed TypeScript objects (`types.ts`). Components only render data, so updating a text, credit or project never means touching JSX.
 - **Graceful missing data.** Fields that are not confirmed yet are `null` and simply don't render (a missing role, an empty press list). Missing images render a placeholder that keeps the layout stable.
-- **Active-section navigation.** A fixed side menu on desktop and a fixed top bar on mobile (no hamburger: three links fit). The current section is tracked on scroll with `requestAnimationFrame` and exposed with `aria-current="location"`.
+- **Active-section navigation.** A fixed side menu on desktop and a fixed top bar on mobile (no hamburger: four links fit). The current section is tracked on scroll with `requestAnimationFrame` and exposed with `aria-current="location"`.
 - **Accessibility.** Skip link, visible `:focus-visible` styles, 44 px minimum touch targets, semantic landmarks (`header`, `nav`, `main`, `footer`), screen-reader hints on links that open a new tab, and smooth scrolling only when the user has not requested reduced motion.
 - **Privacy-friendly embeds.** Videos use `youtube-nocookie.com` or Vimeo with `dnt=1`, loaded lazily.
 - **Lightweight assets.** The brush-stroke menu indicator is a 3 KB alpha PNG used as a CSS mask, so its colour follows the accent token (it replaced a 188 KB auto-traced SVG).
@@ -28,14 +28,15 @@ One-page portfolio for **Nícola Vilander-Gajardo**, a Chilean transdisciplinary
 ```
 app/
   layout.tsx        # Fonts, metadata, skip link, navigation, footer
-  page.tsx          # Hero → About → Works → Contact
+  page.tsx          # Hero → About → Works → Press → Contact
   globals.css       # Tailwind import and design tokens
 components/         # One component per section, plus MediaImage and VideoEmbed
 content/
   types.ts          # Content model
   site.ts           # Name, roles, contact details
-  about.ts          # Bio, lines of inquiry, practice, research, press
+  about.ts          # Bio, lines of inquiry, practice, research
   projects.ts       # The eight works
+  press.ts          # Press links, newest first
   navigation.ts     # Menu items and section anchors
   images/           # Web-ready photos, one folder per project
 hooks/
