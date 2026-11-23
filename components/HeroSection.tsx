@@ -13,7 +13,7 @@ const GIVEN_NAMES = nameParts.join(" ");
  * visible without scrolling. min-h keeps the photo usable on very short windows.
  * Tablet: a 4:3 photo instead of 4:5, so the name is still in the first screen.
  * Mobile: a 4:5 photo; the name scales with the screen (clamp) so "Vilander-Gajardo"
- * fits on one line down to a 320px screen.
+ * fits on one line down to a 320px screen (Enby Gertrude: 8.06em wide, 34px × 8.06 = 274px < 280px).
  */
 export function HeroSection() {
   return (
@@ -32,7 +32,7 @@ export function HeroSection() {
       />
 
       <div className="flex flex-col gap-3 lg:gap-4">
-        <h1 className="font-serif text-[clamp(2.25rem,11.2vw,2.75rem)] leading-[1.05] font-normal text-balance italic lg:text-[64px] min-[1440px]:text-[80px]">
+        <h1 className="font-serif text-[clamp(2.125rem,10.7vw,2.75rem)] leading-[1.05] font-normal text-balance lg:text-[64px] min-[1440px]:text-[80px]">
           {GIVEN_NAMES} <span className="whitespace-nowrap">{SURNAME}</span>
         </h1>
         <p className="text-[15px] text-muted lg:text-lg">

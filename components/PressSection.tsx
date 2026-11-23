@@ -8,7 +8,7 @@ export function PressSection() {
       id="press"
       className="flex scroll-mt-6 flex-col gap-6 lg:scroll-mt-12 lg:gap-8"
     >
-      <h2 className="font-serif text-[40px] leading-tight font-normal italic lg:text-[56px]">
+      <h2 className="font-serif text-[40px] leading-tight font-normal lg:text-[56px]">
         Press
       </h2>
 

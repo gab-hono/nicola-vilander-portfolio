@@ -9,11 +9,11 @@ const SITE_CREDIT = {
   url: "https://www.gabrielhono.com",
 };
 
-/** Required by the CUTE licence: credit the typeface and link to its original publication. */
+/** Required by the CUTE licence: credit the typeface's designers and link to its original publication. */
 const TYPE_CREDIT = {
-  label: "BBB Baskervvol",
-  foundry: "Bye Bye Binary",
-  url: "https://typotheque.genderfluid.space/fr/fontes/baskervvol",
+  label: "Enby Gertrude",
+  designers: "Valentin Chauveau & Léna Salabert-Triby",
+  url: "https://typotheque.genderfluid.space",
 };
 
 export function SiteFooter() {
@@ -46,7 +46,7 @@ export function SiteFooter() {
             {TYPE_CREDIT.label}
             <span className="sr-only"> (opens in a new tab)</span>
           </a>{" "}
-          by {TYPE_CREDIT.foundry}
+          by {TYPE_CREDIT.designers}
         </p>
       </div>
     </footer>

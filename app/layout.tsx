@@ -7,20 +7,22 @@ import { site } from "@/content/site";
 import "./globals.css";
 
 /**
- * BBB Baskervvol (Bye Bye Binary, CUTE licence): headings, titles and the name in text form.
- * Variable files, unmodified and not subset, so the post-binary glyphs are kept (see app/fonts/baskervvol/README.md).
+ * Enby Gertrude (Valentin Chauveau and Léna Salabert-Triby, CUTE licence): headings, work titles
+ * and the name in text form. A single style, used unmodified and not subset so the post-binary
+ * ligatures are kept (see app/fonts/enby-gertrude/README.md).
  */
-const baskervvol = localFont({
-  src: [
-    { path: "./fonts/baskervvol/BBBBaskervvolVF.woff2", weight: "400 800", style: "normal" },
-    { path: "./fonts/baskervvol/BBBBaskervvolItalicVF.woff2", weight: "400 800", style: "italic" },
-  ],
-  variable: "--font-baskervvol",
+const enbyGertrude = localFont({
+  src: "./fonts/enby-gertrude/Enby_Gertrude_roman.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-enby-gertrude",
   display: "swap",
 });
 
 const workSans = Work_Sans({
   subsets: ["latin"],
+  // Real italics for the work titles set in _underscores_ inside body text (RichText).
+  style: ["normal", "italic"],
   variable: "--font-work-sans",
   display: "swap",
 });
@@ -59,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${baskervvol.variable} ${workSans.variable}`}>
+    <html lang="en" className={`${enbyGertrude.variable} ${workSans.variable}`}>
       <body>
         <a
           href="#main"

@@ -8,7 +8,7 @@ import { TextLists } from "./TextLists";
 const HALF_COLUMN_SIZES =
   "(min-width: 1024px) calc((100vw - 344px - 64px) / 2), calc(100vw - 40px)";
 
-const blockTitle = "font-serif text-[26px] leading-tight font-normal italic lg:text-[32px]";
+const blockTitle = "font-serif text-[26px] leading-tight font-normal lg:text-[32px]";
 
 function TextBlock({ block }: { block: AboutBlock }) {
   return (
@@ -35,7 +35,7 @@ export function AboutSection() {
       id="about"
       className="flex scroll-mt-6 flex-col gap-12 lg:scroll-mt-12 lg:gap-16"
     >
-      <h2 className="font-serif text-[40px] leading-tight font-normal italic lg:text-[56px]">
+      <h2 className="font-serif text-[40px] leading-tight font-normal lg:text-[56px]">
         About
       </h2>
 
@@ -55,7 +55,7 @@ export function AboutSection() {
         <h3 className="text-[13px] font-medium tracking-[0.14em] text-muted uppercase">
           Lines of inquiry
         </h3>
-        <ul className="flex flex-wrap font-serif text-[21px] leading-[1.45] italic lg:text-[28px]">
+        <ul className="flex flex-wrap font-serif text-[21px] leading-[1.45] lg:text-[28px]">
           {linesOfInquiry.map((line, index) => (
             <li key={line}>
               {line}

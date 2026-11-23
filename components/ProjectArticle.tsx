@@ -40,7 +40,7 @@ export function ProjectArticle({ project }: { project: Project }) {
       <header className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:items-baseline lg:justify-between lg:gap-4">
         <h3
           id={titleId}
-          className="font-serif text-[30px] leading-[1.15] font-normal italic lg:text-[44px] lg:leading-[1.1]"
+          className="font-serif text-[30px] leading-[1.15] font-normal lg:text-[44px] lg:leading-[1.1]"
         >
           {title}
         </h3>
