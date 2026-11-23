@@ -11,7 +11,7 @@ One-page portfolio for **Nícola Vilander-Gajardo**, a Chilean transdisciplinary
 - [Next.js 16](https://nextjs.org) (App Router), statically rendered
 - React 19 and TypeScript
 - [Tailwind CSS v4](https://tailwindcss.com) (CSS-first configuration, design tokens in `app/globals.css`)
-- `next/font` (Playfair Display and Work Sans, self-hosted at build time)
+- `next/font`: Work Sans (Google Fonts, self-hosted at build time) and BBB Baskervvol (local files in `app/fonts/baskervvol/`, CUTE licence)
 - Deployed on [Vercel](https://vercel.com); every push to `main` triggers a production deploy
 
 ## Highlights
@@ -71,4 +71,5 @@ npm run images   # process original photos (see below)
 ## Credits
 
 - Design and development: [Gabriel Hono](https://www.gabrielhono.com)
+- Typeface: [BBB Baskervvol](https://typotheque.genderfluid.space/fr/fontes/baskervvol) by Bye Bye Binary, after the ANRT's Baskervville (CUTE licence, see `app/fonts/baskervvol/`)
 - All texts, photographs and artworks © Nícola Vilander-Gajardo and the credited photographers. They are not covered by any licence for reuse.

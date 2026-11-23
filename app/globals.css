@@ -9,7 +9,7 @@
   --color-surface: #151515;
 
   --font-sans: var(--font-work-sans), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-serif: var(--font-baskervvol), Georgia, serif;
 }
 
 @layer base {
