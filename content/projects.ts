@@ -5,6 +5,9 @@ import actionHouse from "./images/action-is-overtaken/escena-2-a-10-2.jpg";
 import divasLead from "./images/divas/pict1163.jpg";
 import divasFabric from "./images/divas/pict1159.jpg";
 import divasStage from "./images/divas/pict1186.jpg";
+import elektraLead from "./images/elektra/elektra-3.jpg";
+import elektraDoorway from "./images/elektra/elektra-5.jpg";
+import elektraStage from "./images/elektra/elektra-1.jpg";
 import misterLead from "./images/mister-the-earrings/1g4a7052.jpg";
 import misterSeated from "./images/mister-the-earrings/1g4a6984.jpg";
 import misterAudience from "./images/mister-the-earrings/1g4a7117.jpg";
@@ -13,7 +16,7 @@ import pamBerryDuo from "./images/pam-berry/cv-pbe-052.jpg";
 import pamBerryBall from "./images/pam-berry/cv-pbe-107.jpg";
 
 // Texts validated by Nícola (7 Nov); roles and credits updated with her answers (11 Nov).
-// Images added on 13 Nov (Action is Overtaken, Pam Berry, Mister, Divas).
+// Images added on 13 Nov (Action is Overtaken, Pam Berry, Mister, Divas) and 23 Nov (Elektra).
 // Mister description by Nícola (17 Nov).
 // 18 Nov: work titles in _italics_; enumerations moved to lists (same wording, newest first).
 // Pending from Nícola: Pam Berry photo credits, remaining images and video IDs.
@@ -182,8 +185,20 @@ export const projects: Project[] = [
     role: "Director & Playwright",
     description:
       "_Elektra_ was a bilingual (German–Spanish), immersive reworking of Hugo von Hofmannsthal’s text created with an all-women cast in resonance with the Chilean feminist uprising. All performers were trained to embody the same roles—often simultaneously—merging contemporary dance practices with the foundations of lyric voice. The work incorporated live sound mixing and video projection as active dramaturgical agents.",
-    leadImage: null,
-    gallery: [],
+    leadImage: {
+      src: elektraLead,
+      alt: "A barefoot performer in a long black dress stands at centre stage with both hands over the face, between two metal scaffold towers, as blurred figures move around",
+    },
+    gallery: [
+      {
+        src: elektraDoorway,
+        alt: "A performer in a dark blue dress steps out of a lit doorway, one hand at the chin, watched by performers standing in the shadows",
+      },
+      {
+        src: elektraStage,
+        alt: "Wide view of a dark stage: two metal scaffold towers frame a lit doorway where a group of performers is gathered on a staircase",
+      },
+    ],
     videos: [],
     credits: "Photos: Juan Ramírez Jardua",
   },
