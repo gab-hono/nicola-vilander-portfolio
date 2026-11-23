@@ -5,10 +5,7 @@ import { HERO_ID, navItems, type NavItem } from "@/content/navigation";
 import { site } from "@/content/site";
 import type { SectionId } from "@/content/types";
 import { useActiveSection } from "@/hooks/useActiveSection";
-
-/** "Nícola" / "Vilander-Gajardo": two deliberate lines in the side menu instead of a break at the hyphen. */
-const [FIRST_NAME, ...REST_OF_NAME] = site.name.split(" ");
-const LAST_NAME = REST_OF_NAME.join(" ");
+import { Signature } from "./Signature";
 
 /** Module-level constant so the hook's effect does not re-run on every render. */
 const TRACKED_IDS: readonly (SectionId | typeof HERO_ID)[] = [
@@ -68,11 +65,9 @@ export function SiteNav() {
     <>
       {/* Mobile and tablet: fixed top bar, no hamburger. */}
       <header className="fixed inset-x-0 top-0 z-40 flex h-(--header-height) flex-col justify-center gap-1 border-b border-line bg-background px-5 lg:hidden">
-        <a
-          href={`#${HERO_ID}`}
-          className="self-start font-serif text-[19px] leading-tight italic"
-        >
-          {site.name}
+        {/* w-28: 112×43px, so the name and the 44px links fit in the 96px bar. */}
+        <a href={`#${HERO_ID}`} className="self-start">
+          <Signature label={site.name} className="w-28" />
         </a>
         <nav aria-label="Main">
           {/* gap-5: four links fit in the 320px of a 360px screen (~300px). */}
@@ -92,12 +87,9 @@ export function SiteNav() {
 
       {/* Desktop: fixed side menu. */}
       <header className="fixed inset-y-0 left-0 z-40 hidden w-70 flex-col gap-12 overflow-y-auto px-10 py-12 lg:flex">
-        <a
-          href={`#${HERO_ID}`}
-          className="font-serif text-2xl leading-tight italic"
-        >
-          <span className="block">{FIRST_NAME}</span>
-          <span className="block whitespace-nowrap">{LAST_NAME}</span>
+        {/* w-50: the full 200px left inside the 280px menu by its 40px side padding. */}
+        <a href={`#${HERO_ID}`} className="self-start">
+          <Signature label={site.name} className="w-50" />
         </a>
         <nav aria-label="Main">
           <ul className="flex flex-col gap-2">
