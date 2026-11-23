@@ -9,7 +9,7 @@ export function TextLists({ lists }: { lists?: TextList[] }) {
     <div className="flex flex-col gap-6">
       {lists.map((list) => (
         <div key={list.label} className="flex flex-col gap-2">
-          <h4 className="text-[13px] font-medium tracking-[0.14em] text-muted uppercase">
+          <h4 className="text-[15px] font-medium text-muted lg:text-base">
             {list.label}
           </h4>
           <ul className="flex flex-col gap-1">

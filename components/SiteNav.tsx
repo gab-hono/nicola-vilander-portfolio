@@ -38,13 +38,13 @@ type NavLinkProps = {
 
 function NavLink({ item, isActive, variant }: NavLinkProps) {
   const color = isActive ? "text-accent" : "text-muted hover:text-foreground";
-  const size = variant === "mobile" ? "text-[13px]" : "gap-3 text-[15px]";
+  const size = variant === "mobile" ? "text-[15px]" : "gap-3 text-[17px]";
 
   return (
     <a
       href={`#${item.id}`}
       aria-current={isActive ? "location" : undefined}
-      className={`inline-flex min-h-11 items-center tracking-[0.12em] uppercase motion-safe:transition-colors ${size} ${color}`}
+      className={`inline-flex min-h-11 items-center motion-safe:transition-colors ${size} ${color}`}
     >
       {variant === "desktop" && (
         <span
@@ -70,7 +70,7 @@ export function SiteNav() {
           <Signature label={site.name} className="w-28" />
         </a>
         <nav aria-label="Main">
-          {/* gap-5: four links fit in the 320px of a 360px screen (~300px). */}
+          {/* gap-5: the four links (15px, no uppercase) take ~240px, so they fit down to a 320px screen. */}
           <ul className="flex gap-5">
             {navItems.map((item) => (
               <li key={item.id}>

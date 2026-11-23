@@ -44,7 +44,7 @@ export function ProjectArticle({ project }: { project: Project }) {
         >
           {title}
         </h3>
-        <p className="text-[13px] tracking-[0.06em] text-muted lg:text-[15px]">
+        <p className="text-[14px] text-muted lg:text-base">
           {years}
           {role && ` · ${role}`}
         </p>

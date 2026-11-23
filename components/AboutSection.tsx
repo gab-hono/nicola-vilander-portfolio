@@ -52,7 +52,7 @@ export function AboutSection() {
 
       {/* Lines of inquiry */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-[13px] font-medium tracking-[0.14em] text-muted uppercase">
+        <h3 className="text-[15px] font-medium text-muted lg:text-base">
           Lines of inquiry
         </h3>
         <ul className="flex flex-wrap font-serif text-[21px] leading-[1.45] lg:text-[28px]">
